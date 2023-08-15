@@ -1,17 +1,13 @@
 {
-    "compilerOptions": {
-        "target": "ES2022",
-        "module": "ESNext",
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "strict": true,
-        "outDir": "dist"
-    },
-    "include": [
-        "*.ts",
-        "src/*.ts"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "outDir": "dist",
+    "typeRoots": ["./src/types", "./node_modules/@types"]
+  },
+  "include": ["src/*.ts"],
+  "exclude": ["node_modules"]
 }

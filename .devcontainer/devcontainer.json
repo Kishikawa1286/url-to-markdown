@@ -1,54 +1,48 @@
 {
-    "name": "url-to-markdown",
-    "dockerFile": "Dockerfile",
-	"features": {
-		"ghcr.io/devcontainers/features/common-utils:2": {
-			"installZsh": true,
-			"configureZshAsDefaultShell": true,
-			"installOhMyZsh": true,
-			"installOhMyZshConfig": true
-		}
+  "name": "url-to-markdown",
+  "image": "node:20-buster-slim",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "installOhMyZshConfig": true
     },
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "eslint.workingDirectories": [
-                    "./"
-                ],
-                "editor.defaultFormatter": "esbenp.prettier-vscode",
-                "editor.formatOnSave": true,
-                "editor.codeActionsOnSave": {
-                    "source.fixAll.eslint": true,
-                    "source.organizeImports": true
-                },
-                "eslint.codeActionsOnSave.rules": [
-                    "!@typescript-eslint/*",
-                    "*"
-                ],
-                "typescript.tsdk": "node_modules/typescript/lib",
-                "eslint.validate": [
-                    "javascript",
-                    "typescript"
-                ],
-                "files.exclude": {
-                    "**/.git": true,
-                    "**/.svn": true,
-                    "**/.hg": true,
-                    "**/CVS": true,
-                    "**/.DS_Store": true,
-                    "**/node_modules": false
-                },
-                "typescript.enablePromptUseWorkspaceTsdk": true,
-                "[typescript]": {
-                    "editor.tabSize": 2
-                }
-            },
-            "extensions": [
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode",
-                "christian-kohler.npm-intellisense",
-                "unional.vscode-sort-package-json"
-            ]
+    "ghcr.io/devcontainers-contrib/features/pnpm:2": {}
+  },
+  "postCreateCommand": "pnpm install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "eslint.workingDirectories": ["./"],
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true,
+          "source.organizeImports": true
+        },
+        "eslint.codeActionsOnSave.rules": ["!@typescript-eslint/*", "*"],
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "eslint.validate": ["javascript", "typescript"],
+        "files.exclude": {
+          "**/.git": true,
+          "**/.svn": true,
+          "**/.hg": true,
+          "**/CVS": true,
+          "**/.DS_Store": true,
+          "**/node_modules": false
+        },
+        "typescript.enablePromptUseWorkspaceTsdk": true,
+        "[typescript]": {
+          "editor.tabSize": 2
         }
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "christian-kohler.npm-intellisense",
+        "unional.vscode-sort-package-json"
+      ]
     }
+  }
 }

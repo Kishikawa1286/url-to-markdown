@@ -1,28 +1,29 @@
 {
-    "name": "summa-doc",
-    "version": "1.0.0",
-    "license": "Unlicense",
-    "author": "Kentaro Ishikawa",
-    "type": "module",
-    "scripts": {
-        "start": "npx tsc && node ./dist/main.js"
-    },
-    "dependencies": {
-        "axios": "^1.4.0",
-        "dotenv": "^16.0.3",
-        "ora": "^6.3.1"
-    },
-    "devDependencies": {
-        "@types/node": "^20.5.0",
-        "@types/puppeteer": "^7.0.4",
-        "@typescript-eslint/eslint-plugin": "^6.0.0",
-        "@typescript-eslint/parser": "^6.0.0",
-        "eslint": "^8.36.0",
-        "eslint-config-esnext": "^4.1.0",
-        "eslint-config-prettier": "^8.7.0",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-prettier": "^5.0.0",
-        "prettier": "^3.0.0",
-        "typescript": "^5.0.4"
-    }
+  "name": "summa-doc",
+  "version": "1.0.0",
+  "license": "Unlicense",
+  "author": "Kentaro Ishikawa",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsc && node ./dist/main.js"
+  },
+  "dependencies": {
+    "axios": "1.4.0",
+    "dotenv": "16.0.3",
+    "jsdom": "22.1.0",
+    "ora": "6.3.1",
+    "turndown": "7.1.2"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.1",
+    "@types/node": "^20.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-node": "^0.3.9",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.1",
+    "typescript": "5.1.6"
+  }
 }
